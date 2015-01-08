@@ -30,8 +30,12 @@
 log-enable=error+
 log-to-syslog=yes
 auth=no
-<% if scope.lookupvar("qpid::ssl") -%>
+<% if scope.lookupvar("qpid::require_encryption") -%>
 require-encryption=yes
+<% else -%>
+require-encryption=no
+<% end %>
+<% if scope.lookupvar("qpid::ssl") -%>
 ssl-require-client-authentication=yes
 ssl-port=<%= scope.lookupvar("qpid::ssl_port") %>
 ssl-cert-db=<%= scope.lookupvar("qpid::ssl_cert_db") %>

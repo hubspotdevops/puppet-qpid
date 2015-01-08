@@ -24,7 +24,7 @@
 # $user_groups::              Additional user groups to add the qpidd user to
 #
 class qpid (
-
+  $require_encryption     = $qpid::params::require_encryption,
   $ssl                    = $qpid::params::ssl,
   $ssl_port               = $qpid::params::ssl_port,
   $ssl_cert_db            = 'UNSET',
