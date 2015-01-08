@@ -30,4 +30,11 @@ class qpid::config {
     mode   => '0644',
   }
 
+  file { '/etc/sysconfig/qpidd':
+    ensure  => file,
+    content => template('qpid/sysconfig.erb'),
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+  }
 }

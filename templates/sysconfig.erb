@@ -1,0 +1,3 @@
+<% if scope.lookupvar("qpid::sysconfig_options") != 'UNSET' -%>
+QPIDD_OPTIONS='<%= scope.lookupvar("qpid::sysconfig_options") %>'
+<% end %>
