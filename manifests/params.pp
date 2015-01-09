@@ -4,6 +4,8 @@
 #
 class qpid::params {
 
+  $require_encryption = true
+
   $ssl      = false
   $ssl_port = 5671
 
