@@ -21,6 +21,8 @@
 # $ssl_cert_name::            The SSL cert name
 #                             string: string
 #
+# $sysconfig_options::        Options passed to service when starting.
+#
 # $user_groups::              Additional user groups to add the qpidd user to
 #
 class qpid (
@@ -30,6 +32,8 @@ class qpid (
   $ssl_cert_db            = 'UNSET',
   $ssl_cert_password_file = 'UNSET',
   $ssl_cert_name          = 'UNSET',
+
+  $sysconfig_options      = 'UNSET',
 
   $user_groups            = $qpid::params::user_groups
 
